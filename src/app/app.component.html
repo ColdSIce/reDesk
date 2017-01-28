@@ -10,11 +10,11 @@
 							<a class="gn-icon gn-icon-search"><span>Поиск</span></a>
 						</li>
 						<li>
-							<a class="gn-icon gn-icon-download">Движения</a>
-							<ul class="gn-submenu">
+							<a class="router_link" routerLink="flows" routerLinkActive="active" class="gn-icon gn-icon-download">Движения</a>
+							<!--<ul class="gn-submenu">
 								<li><a class="gn-icon gn-icon-illustrator">Доходы</a></li>
 								<li><a class="gn-icon gn-icon-photoshop">Расходы</a></li>
-							</ul>
+							</ul>-->
 						</li>
 						<li><a class="gn-icon gn-icon-cog">Планирование</a></li>
 						<li><a class="gn-icon gn-icon-cog">Отчеты</a></li>
@@ -31,12 +31,12 @@
 				</div><!-- /gn-scroller -->
 			</nav>
 		</li>
-		<li><a href="#">О проекте</a></li>
-		<li><a href="#"><span>Календарь</span></a></li>
-		<li><a href="#"><span>Войти</span></a></li>
+		<li><a class="router_link" routerLink="about" routerLinkActive="active">О проекте</a></li>
+		<li><a class="router_link" href="#"><span>Календарь</span></a></li>
+		<li><a class="router_link" href="#"><span>Войти</span></a></li>
 	</ul>
-	<header>
-		<h1>reDeska<span>Панель управления домашними ресурсами</span></h1>	
-	</header> 
+	<header id="main_header">
+		<router-outlet></router-outlet>
+	</header>
 </div><!-- /container -->
 

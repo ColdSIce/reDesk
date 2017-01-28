@@ -1,0 +1,12 @@
+.part_slide{
+    padding-left: 80px !important;
+}
+
+.full_slide{
+    padding-left: 360px !important;
+}
+
+#main_header{
+    padding-left: 60px;
+    transition: all .3s;
+}

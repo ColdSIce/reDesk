@@ -11,10 +11,12 @@ export class AppComponent {
 
 	_openIconMenu() {
 		document.getElementById('gn_menu_wrapper').classList.add('gn-open-part'); 
+		document.getElementById('main_header').classList.add('part_slide'); 
 	}
 
 	_closeIconMenu() {
 		document.getElementById('gn_menu_wrapper').classList.remove('gn-open-part');
+		document.getElementById('main_header').classList.remove('part_slide'); 
 	}
 
 	_openMenu() {
@@ -22,6 +24,7 @@ export class AppComponent {
 		document.getElementById('gn_icon_menu').classList.add('gn-selected'); 
 		this.isMenuOpen = true;
 		document.getElementById('gn_menu_wrapper').classList.add('gn-open-all');
+		document.getElementById('main_header').classList.add('full_slide'); 
 		this._closeIconMenu();
 	}
 
@@ -31,6 +34,7 @@ export class AppComponent {
 		document.getElementById('gn_icon_menu').classList.remove('gn-selected'); 
 		this.isMenuOpen = false;
 		document.getElementById('gn_menu_wrapper').classList.remove('gn-open-all');
+		document.getElementById('main_header').classList.remove('full_slide'); 
 		this._closeIconMenu();
 	}
 	
