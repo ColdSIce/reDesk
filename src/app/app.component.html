@@ -1,3 +1,42 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+	<ul id="gn-menu" class="gn-menu-main">
+		<li class="gn-trigger">
+			<a id="gn_icon_menu" class="gn-icon gn-icon-menu" (click)="_toggleMenu()" (mouseover)="_openIconMenu()" (mouseout)="_closeIconMenu()"><span>Menu</span></a>
+			<nav id="gn_menu_wrapper" class="gn-menu-wrapper" (mouseover)="_openMenu()">
+				<div class="gn-scroller">
+					<ul class="gn-menu">
+						<li class="gn-search-item">
+							<input placeholder="Поиск" type="search" class="gn-search">
+							<a class="gn-icon gn-icon-search"><span>Поиск</span></a>
+						</li>
+						<li>
+							<a class="gn-icon gn-icon-download">Движения</a>
+							<ul class="gn-submenu">
+								<li><a class="gn-icon gn-icon-illustrator">Доходы</a></li>
+								<li><a class="gn-icon gn-icon-photoshop">Расходы</a></li>
+							</ul>
+						</li>
+						<li><a class="gn-icon gn-icon-cog">Планирование</a></li>
+						<li><a class="gn-icon gn-icon-cog">Отчеты</a></li>
+						<li><a class="gn-icon gn-icon-help">Помощь</a></li>
+						<!--<li>
+							<a class="gn-icon gn-icon-archive">Archives</a>
+							<ul class="gn-submenu">
+								<li><a class="gn-icon gn-icon-article">Articles</a></li>
+								<li><a class="gn-icon gn-icon-pictures">Images</a></li>
+								<li><a class="gn-icon gn-icon-videos">Videos</a></li>
+							</ul>
+						</li>-->
+					</ul>
+				</div><!-- /gn-scroller -->
+			</nav>
+		</li>
+		<li><a href="#">О проекте</a></li>
+		<li><a href="#"><span>Календарь</span></a></li>
+		<li><a href="#"><span>Войти</span></a></li>
+	</ul>
+	<header>
+		<h1>reDeska<span>Панель управления домашними ресурсами</span></h1>	
+	</header> 
+</div><!-- /container -->
+
