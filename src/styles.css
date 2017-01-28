@@ -2,6 +2,17 @@
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 @import '~@swimlane/ngx-datatable/release/material.css';
 
+@font-face {
+	font-family: 'muller_thin';
+  src:url('fonts/muller/Muller-Thin-DEMO.ttf');
+}
+
+@font-face {
+	font-family: 'muller_bold';
+  src:url('fonts/muller/Muller-ExtraBold-DEMO.ttf');
+}
+
+
 /*loader*/
 body .vertical-centered-box {
   position: absolute;
@@ -26,13 +37,6 @@ body .vertical-centered-box .content {
   font-size: 26px;
 }
 
-#logo_redeska{
-  width: 120px;
-  height: 120px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 120px;
-}
 
 .loader-circle {
   position: absolute;
@@ -107,3 +111,14 @@ lesshat-selector {
   zoom: 1;
 }
 
+#logo_redeska_loader{
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
+}
+
+#logo_redeska_loader img{
+    width: 80%;
+}
