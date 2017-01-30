@@ -25,7 +25,7 @@
 		list-style: none;
 		text-transform: none;
 		font-weight: 300;
-		font-family: 'Lato', Arial, sans-serif;
+		font-family: 'Open sans', Arial, sans-serif;
 		line-height: 60px;
 }
 
@@ -157,7 +157,7 @@ input.gn-search {
 		background: transparent;
 		color: #5f6f81;
 		font-weight: 300;
-		font-family: 'Lato', Arial, sans-serif;
+		font-family: 'Open Sans', Arial, sans-serif;
 		cursor: pointer;
 }
 

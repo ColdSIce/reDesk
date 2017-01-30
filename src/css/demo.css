@@ -1,13 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@font-face {
-	font-family: 'codropsicons';
-	src:url('../fonts/codropsicons/codropsicons.eot');
-	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
-	font-weight: normal;
-	font-style: normal;
+
+@import url(http://allfont.ru/allfont.css?fonts=open-sans);
+
+
+html{
+  	font-family: 'Open sans', serif !important;
+}
+
+h1, h2, h3, h4, h5{
+	color: #fff;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 .container > header h1,
 .codrops-top {
 	color: #fff;
-	font-family: 'muller_thin','Lato', Arial, sans-serif;
+	font-family: 'Open Sans','Lato', Arial, sans-serif;
 }
 
 .container > header {

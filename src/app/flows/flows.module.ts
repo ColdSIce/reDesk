@@ -7,9 +7,11 @@ import { MaterialModule } from '@angular/material';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import 'hammerjs';
 
+
+
 const flowsRoutes: Routes = [
   { path: 'flows',  component: FlowListComponent },
-  { path: 'hero/:id', component: FlowDetailsComponent }
+  { path: 'flow/:id', component: FlowDetailsComponent }
 ];
 
 @NgModule({
@@ -19,6 +21,9 @@ const flowsRoutes: Routes = [
     RouterModule.forChild(flowsRoutes),
     MaterialModule.forRoot()
   ],
-  declarations: [FlowListComponent, FlowDetailsComponent]
+  declarations: [
+    FlowListComponent, 
+    FlowDetailsComponent
+    ]
 })
 export class FlowsModule { }

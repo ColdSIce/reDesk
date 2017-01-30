@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Flow } from '../../model/flow';
 import { FlowService } from '../../services/flow.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-flow-list',
@@ -9,12 +10,18 @@ import { FlowService } from '../../services/flow.service';
 })
 export class FlowListComponent implements OnInit {
 
-	flows:Flow[];
-  selected = [];
-  nowSelected:boolean;
+  fs:FlowService;
 
-  constructor(private fs:FlowService) {
-      this.flows = fs.getFlows();
+	flows:Flow[];
+  selected:Flow[] = [];
+  nowSelected:boolean;
+  editedFlow:Flow;
+  editedResult:any;
+
+
+  constructor(fserv:FlowService, private router: Router) {
+      this.fs = fserv;
+      this.flows = this.fs.getFlows();
       this.nowSelected = false;
   }
 
@@ -31,8 +38,6 @@ export class FlowListComponent implements OnInit {
   
 
   onSelect({ selected }) {
-    console.log('Select Event', selected, this.selected);
-
     this.selected.splice(0, this.selected.length);
     this.selected.push(...selected);
 
@@ -44,7 +49,27 @@ export class FlowListComponent implements OnInit {
   }
 
   onActivate(event) {
-    console.log('Activate Event', event);
+    
+  }
+
+  isSingleSelected(){
+    if(this.selected.length == 1){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  deleteFlows(){
+    this.fs.deleteFlows(this.selected);
+    this.selected = [];
+    this.nowSelected = false;
+  }
+
+  edit(){
+    if(this.selected.length == 1)
+    this.router.navigate(['/flow', this.selected[0].id]);
   }
 
 }
+

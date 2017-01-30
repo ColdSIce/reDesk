@@ -2,16 +2,19 @@
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 @import '~@swimlane/ngx-datatable/release/material.css';
 
-@font-face {
-	font-family: 'muller_thin';
-  src:url('fonts/muller/Muller-Thin-DEMO.ttf');
+
+
+input.gn-search {
+    font-size: 18px;
 }
 
-@font-face {
-	font-family: 'muller_bold';
-  src:url('fonts/muller/Muller-ExtraBold-DEMO.ttf');
+.page-count{
+    display: none !important;
 }
 
+html{
+  font-family: 'Open sans', serif !important;
+}
 
 /*loader*/
 body .vertical-centered-box {
@@ -121,4 +124,8 @@ lesshat-selector {
 
 #logo_redeska_loader img{
     width: 80%;
+}
+
+[md-button]{
+  color:#fff !important;
 }

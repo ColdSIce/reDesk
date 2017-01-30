@@ -6,11 +6,13 @@
     <h3>Движения</h3>
   </div>
   <div style="display: inline-block" *ngIf="nowSelected">
-    <button md-button>Удалить</button>
+    <button md-button (click)="deleteFlows()">Удалить</button>
+    <button md-button *ngIf="isSingleSelected()" (click)="edit()">Редактировать</button>
   </div>
 </div>
 
 <ngx-datatable
+  id="flows_table"
   [rows]="flows"
   [columns]="columns"
   [columnMode]="'force'"

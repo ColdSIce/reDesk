@@ -17,6 +17,7 @@ export class AppComponent {
 	_closeIconMenu() {
 		document.getElementById('gn_menu_wrapper').classList.remove('gn-open-part');
 		document.getElementById('main_header').classList.remove('part_slide'); 
+		window.dispatchEvent(new Event('resize'));
 	}
 
 	_openMenu() {
@@ -36,6 +37,7 @@ export class AppComponent {
 		document.getElementById('gn_menu_wrapper').classList.remove('gn-open-all');
 		document.getElementById('main_header').classList.remove('full_slide'); 
 		this._closeIconMenu();
+		window.dispatchEvent(new Event('resize'));
 	}
 	
 
