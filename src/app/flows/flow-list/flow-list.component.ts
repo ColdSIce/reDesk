@@ -71,5 +71,10 @@ export class FlowListComponent implements OnInit {
     this.router.navigate(['/flow', this.selected[0].id]);
   }
 
+  newFlow(){
+    this.router.navigate(['/flows/new']);
+  }
+
+
 }
 

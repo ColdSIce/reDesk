@@ -1,0 +1,10 @@
+@import '~@angular/material/core/theming/all-theme';
+
+@include md-core();
+
+  $primary: md-palette($md-blue-grey,600);
+  $accent: md-palette($md-pink,600);
+
+  $theme: md-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);

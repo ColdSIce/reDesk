@@ -37,14 +37,33 @@ export class FlowService{
         return f;
     }
 
-    x(){
-        
-    }
-
     deleteFlows(flows:Flow[]){
         flows.forEach(flow => {
             this.flows.splice(this.flows.indexOf(flow), 1);
         });
+    }
+
+    updateFlow(flow:Flow){
+        var index = this.flows.indexOf(flow);
+        if (index > -1) {
+            this.flows.splice(index, 1);
+        }
+        this.flows.push(flow);
+    }
+
+    generateId(){
+        let id = 0;
+        this.flows.forEach(f => {
+            if(id < f.id){
+                id = f.id
+            }
+        });
+        return (id + 1);
+    }
+
+    save(flow:Flow){
+        flow.id = this.generateId();
+        this.flows.push(flow);
     }
 
 }

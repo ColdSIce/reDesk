@@ -5,8 +5,9 @@
   <div style="display: inline-block; margin-right: 5px;">
     <h3>Движения</h3>
   </div>
-  <div style="display: inline-block" *ngIf="nowSelected">
-    <button md-button (click)="deleteFlows()">Удалить</button>
+  <div style="display: inline-block">
+    <button md-button (click)="newFlow()">+ Новое движение</button>
+    <button *ngIf="nowSelected" md-button (click)="deleteFlows()">Удалить</button>
     <button md-button *ngIf="isSingleSelected()" (click)="edit()">Редактировать</button>
   </div>
 </div>

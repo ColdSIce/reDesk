@@ -4,6 +4,7 @@
 
 
 
+
 input.gn-search {
     font-size: 18px;
 }
@@ -126,6 +127,7 @@ lesshat-selector {
     width: 80%;
 }
 
-[md-button]{
+.ngx-datatable.material .datatable-footer .datatable-pager li.active a{
+  background-color: #D81B60 !important;
   color:#fff !important;
 }
